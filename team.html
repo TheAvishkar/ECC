@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - ECC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#3b82f6',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans leading-relaxed text-gray-800 bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md transition-all duration-300 shadow-lg" id="header">
+        <nav class="flex justify-between items-center px-8 py-4">
+            <div class="text-primary text-3xl font-bold">
+                <h2>ECC</h2>
+            </div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="about.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">About Us</a></li>
+                <li><a href="event.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Events</a></li>
+                <li><a href="team.html" class="text-primary font-medium">Team</a></li>
+                <li><a href="gallery.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Gallery</a></li>
+                <li><a href="contact.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Contact</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col cursor-pointer" id="nav-toggle">
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed left-0 top-20 w-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300" id="mobile-menu">
+            <ul class="flex flex-col items-center py-8 space-y-4">
+                <li><a href="index.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="about.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">About Us</a></li>
+                <li><a href="events.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Events</a></li>
+                <li><a href="team.html" class="text-primary font-medium">Team</a></li>
+                <li><a href="gallery.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Gallery</a></li>
+                <li><a href="contact.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Page Header -->
+            <div class="text-center py-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">Our Team</h1>
+                <p class="text-xl text-gray-600">Meet the dedicated faculty and students who make ECC possible</p>
+            </div>
+
+            <!-- Faculty Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-primary text-center mb-12">Faculty Co-ordinator & Founder of Club</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Faculty Member 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Kanchan.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-primary mb-2">Prof. Kanchan Tiwari</h3>
+                            <p class="text-green-600 font-semibold mb-1">Faculty Co-ordinator</p>
+                            <p class="text-gray-500 text-sm mb-4">Electronics & Telecommunication Engineering</p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                
+                            </p>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">📧</span>
+                                <span>abc</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Faculty Member 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Christy.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-primary mb-2">Mr. Christy Daniel</h3>
+                            <p class="text-green-600 font-semibold mb-1">Founder of club</p>
+                            <p class="text-gray-500 text-sm mb-4">Electronics & Telecommunication Engineering</p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                
+                            </p>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">📧</span>
+                                <span>christydaniel@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Core Team -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold text-primary text-center mb-12">Core Team</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Snehal.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Snehal Japtap</h3>
+                            <p class="text-green-600 font-semibold text-sm mb-1">President</p>
+                            <p class="text-gray-500 text-xs mb-3">Third Year Computer</p>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                Snehal leads the club's overall activities and represents ECC in inter-college events. 
+                                Passionate about Leadership and Team Management.
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">snehaltechtales@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Purva.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Purva Thakare</h3>
+                            <p class="text-green-600 font-semibold text-sm mb-1">Vice President</p>
+                            <p class="text-gray-500 text-xs mb-3">Third Year Computer</p>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                Purva supports strategic decision-making and ensures smooth coordination across all club activities. 
+                                As Vice President, she plays a key role in leadership, collaboration, and execution
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">purvathakare2310@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Avi.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Avishkar Anarase</h3>
+                            <p class="text-green-600 font-semibold text-sm mb-1">Technical Lead</p>
+                            <p class="text-gray-500 text-xs mb-3">Third Year Computer</p>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                Avishkar leads the club's technical innovations with a passion for cutting-edge engineering.
+                                He drives projects focused on real-world impact and technical excellence.
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">avishkaranarase111@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Tanvi.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Tanvi Khandharkar</h3>
+                            <p class="text-green-600 font-semibold text-sm mb-1">Non-Technical Lead</p>
+                            <p class="text-gray-500 text-xs mb-3">Second Year Computer</p>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                Tanvi non-tech lead, where she handles event planning, and team communication.
+                                She enjoy bringing structure and creativity together.It’s where her organizational side meet.
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">tanvikhandharkar80100@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Sejal.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Sejar Sor</h3>
+                            <p class="text-green-600 font-semibold text-sm mb-1">Creative Lead</p>
+                            <p class="text-gray-500 text-xs mb-3">Third Year Computer</p>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                Sejal brings ideas to life through design and creativity.
+                                As Creative Lead, she crafts engaging visuals and impactful storytelling for the club.
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">sejalsor@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Supporting Team -->
+            <section class="mb-16">
+                <!--<h2 class="text-3xl font-bold text-primary text-center mb-12">Supporting Team</h2>-->
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Yash.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Yash Tikone</h3>
+                            <p class="text-blue-600 font-semibold text-sm mb-1">Social Media Head</p>
+                            <p class="text-gray-500 text-xs mb-3">Second Year Electronics</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Passionate about self-growth and communication, 
+                                I believe in showing up authentically and constantly evolving.
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">yasht1409@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Tanishka.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Tanishka Rajale</h3>
+                            <p class="text-blue-600 font-semibold text-sm mb-1">Event Organizer</p>
+                            <p class="text-gray-500 text-xs mb-3">Second Year Computer</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Tanishka, is an Event Orgnizer who manages and coordinates events. 
+                                Enjoys teamwork and creative planning. 
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">tanishka.rajale28@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Siddhi.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Siddhi Kale</h3>
+                            <p class="text-blue-600 font-semibold text-sm mb-1">PR & Marketing Head</p>
+                            <p class="text-gray-500 text-xs mb-3">Third Year ENTC</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Siddhi leads PR and Marketing for ECC, overseeing promotions and public engagement. 
+                                She has a strong interest in strategic communication and brand building.
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">kalesiddhi27@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Vrushali.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Vrushali Gohate</h3>
+                            <p class="text-blue-600 font-semibold text-sm mb-1">Content Creator</p>
+                            <p class="text-gray-500 text-xs mb-3">Third Year A&R</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Vrushali creates content for ECC, handling event promotions, social media updates, and creative visuals. 
+                                Specializes in digital content strategy, visual storytelling, and student engagement.
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">vrushaligohate123@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Team\Aarsh.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Aarsh Bhandari</h3>
+                            <p class="text-blue-600 font-semibold text-sm mb-1">Documentation Co-ordinator</p>
+                            <p class="text-gray-500 text-xs mb-3">Second Year Computer</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Aarsh, our meticulous Documentation Coordinator, ensures seamless organization and management of team records. 
+                                he’s driven by a deep interest in sustainability and environmental protection.
+                            </p>
+                            <div class="flex items-center text-xs text-gray-600">
+                                <span class="mr-1">📧</span>
+                                <span class="truncate">2006aarshbhandari@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Join Us Section -->
+            <section class="bg-gradient-to-br from-primary to-secondary text-white rounded-3xl p-12 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Want to Join Our Team?</h2>
+                    <p class="text-lg md:text-xl mb-8 opacity-90 leading-relaxed">
+                        We're always looking for passionate students who want to contribute to the 
+                        electronics and communication community. Join us and be part of something amazing!
+                    </p>
+                    <a href="contact.html" class="inline-block bg-white text-primary px-8 py-4 rounded-full font-semibold text-lg hover:transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                        Get In Touch
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">ECC</h3>
+                    <p class="text-gray-300">Engineers Connect Club</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-secondary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">About Us</a></li>
+                        <li><a href="event.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">Events</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-secondary mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/@engineersconnectclub" class="text-gray-300 hover:text-secondary transition-colors duration-300">Youtube</a>
+                        <a href="https://www.instagram.com/engineersconnectclub/profilecard/?igsh=MWM4cGVjcjV4cnRkMA==" class="text-gray-300 hover:text-secondary transition-colors duration-300">Instagram</a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7325235320470286338" class="text-gray-300 hover:text-secondary transition-colors duration-300">LinkedIn</a>
+                        <a href="https://discord.gg/gfpTRcUb" class="text-gray-300 hover:text-secondary transition-colors duration-300">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Engineers Connect Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

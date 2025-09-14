@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - ECC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans leading-relaxed text-gray-800 bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md transition-all duration-300 shadow-lg" id="header">
+        <nav class="flex justify-between items-center px-8 py-4">
+            <div class="text-primary text-3xl font-bold">
+                <h2>ECC</h2>
+            </div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="about.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">About Us</a></li>
+                <li><a href="event.html" class="text-primary font-medium">Events</a></li>
+                <li><a href="team.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Team</a></li>
+                <li><a href="gallery.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Gallery</a></li>
+                <li><a href="contact.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Contact</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col cursor-pointer" id="nav-toggle">
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Page Header -->
+            <div class="text-center py-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">Events & Activities</h1>
+                <p class="text-xl text-gray-600">Discover our upcoming and past events</p>
+            </div>
+
+            <!-- Event Filters -->
+            <div class="flex justify-center flex-wrap gap-4 mb-12">
+                <button class="bg-primary text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-secondary" data-filter="all">All Events</button>
+                <button class="bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-white" data-filter="upcoming">Upcoming</button>
+                <button class="bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-white" data-filter="past">Past Events</button>
+                <button class="bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-white" data-filter="workshop">Workshops</button>
+            </div>
+
+            <!-- Upcoming Events -->
+            <section class="mb-16">
+                <!--<h2 class="text-3xl font-bold text-primary text-center mb-12">Upcoming Events</h2>-->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 upcoming workshop">
+                        <div class="relative h-48">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Event\induction.jpg" alt="Arduino Workshop" class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary text-white px-3 py-2 rounded-lg text-center min-w-16">
+                                <div class="text-xl font-bold">07</div>
+                                <div class="text-sm">Aug</div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Induction</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Meet the vibrant new team of our club at the Induction Ceremony! 
+                                Join us as we kick off a year of innovation, collaboration, and exciting initiatives.
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-gray-600">
+                                <div class="flex items-center">
+                                    <span class="mr-2">⏰</span>
+                                    <span>3:00 PM - 5:00 PM</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>504</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-primary text-white py-3 rounded-full font-medium hover:bg-secondary hover:transform hover:-translate-y-1 transition-all duration-300">
+                                Register Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 upcoming">
+                        <div class="relative h-48">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Event\git.jpg" alt="Tech Symposium" class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary text-white px-3 py-2 rounded-lg text-center min-w-16">
+                                <div class="text-xl font-bold">25</div>
+                                <div class="text-sm">Aug</div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Github Workshop</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Unlock the power of version control with our hands-on GitHub Workshop! 
+                                Learn to collaborate, manage code, and build your developer portfolio like a pro.
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-gray-600">
+                                <div class="flex items-center">
+                                    <span class="mr-2">⏰</span>
+                                    <span>9:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>Main Auditorium</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-primary text-white py-3 rounded-full font-medium hover:bg-secondary hover:transform hover:-translate-y-1 transition-all duration-300">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 upcoming workshop">
+                        <div class="relative h-48">
+                            <img src="C:\Users\avish\OneDrive\Desktop\ECC\Event\mesx.png" alt="MesX 4.0" class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary text-white px-3 py-2 rounded-lg text-center min-w-16">
+                                <div class="text-xl font-bold">00</div>
+                                <div class="text-sm">Abc</div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">MesX 4.0</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Get ready for MESx 4.0 – where innovation meets inspiration! 
+                                A dynamic platform for students to share ideas, spark change, and ignite their passion for growth.
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-gray-600">
+                                <div class="flex items-center">
+                                    <span class="mr-2">⏰</span>
+                                    <span>-------</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>MESWCOE CAMPUS</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-primary text-white py-3 rounded-full font-medium hover:bg-secondary hover:transform hover:-translate-y-1 transition-all duration-300">
+                                Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Past Events 
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-primary text-center mb-12">Past Events</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     Past Event Card 1 -->
+                    <!--<div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 past workshop">
+                        <div class="relative h-48">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Robotics Competition" class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                                Completed
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Robotics Competition 2023</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Students showcased their robotics projects in various categories including 
+                                line following, obstacle avoidance, and autonomous navigation.
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-gray-600">
+                                <div class="flex items-center">
+                                    <span class="mr-2">⏰</span>
+                                    <span>December 2023</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>Sports Complex</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-transparent border-2 border-primary text-primary py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300">
+                                View Gallery
+                            </button>
+                        </div>
+                    </div>-->
+
+                    <!-- Add more past event cards here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">ECC</h3>
+                    <p class="text-gray-300">Engineers Connect Club</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-secondary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">About Us</a></li>
+                        <li><a href="event.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">Events</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-secondary mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/@engineersconnectclub" class="text-gray-300 hover:text-secondary transition-colors duration-300">Youtube</a>
+                        <a href="https://www.instagram.com/engineersconnectclub/profilecard/?igsh=MWM4cGVjcjV4cnRkMA==" class="text-gray-300 hover:text-secondary transition-colors duration-300">Instagram</a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7325235320470286338" class="text-gray-300 hover:text-secondary transition-colors duration-300">LinkedIn</a>
+                        <a href="https://discord.gg/gfpTRcUb" class="text-gray-300 hover:text-secondary transition-colors duration-300">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Engineers Connect Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

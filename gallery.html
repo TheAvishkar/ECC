@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - ECC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#3b82f6',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'zoom-in': 'zoomIn 0.3s ease-out',
+                    },
+                    keyframes: {
+                        zoomIn: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans leading-relaxed text-gray-800 bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md transition-all duration-300 shadow-lg" id="header">
+        <nav class="flex justify-between items-center px-8 py-4">
+            <div class="text-primary text-3xl font-bold">
+                <h2>ECC</h2>
+            </div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="about.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">About Us</a></li>
+                <li><a href="event.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Events</a></li>
+                <li><a href="team.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Team</a></li>
+                <li><a href="gallery.html" class="text-primary font-medium">Gallery</a></li>
+                <li><a href="contact.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Contact</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col cursor-pointer" id="nav-toggle">
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed left-0 top-20 w-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300" id="mobile-menu">
+            <ul class="flex flex-col items-center py-8 space-y-4">
+                <li><a href="index.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="about.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">About Us</a></li>
+                <li><a href="event.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Events</a></li>
+                <li><a href="team.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Team</a></li>
+                <li><a href="gallery.html" class="text-primary font-medium">Gallery</a></li>
+                <li><a href="contact.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Page Header -->
+            <div class="text-center py-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">Photo Gallery</h1>
+                <p class="text-xl text-gray-600">Explore our memorable moments and achievements</p>
+            </div>
+
+            <!-- Gallery Filters -->
+            <div class="flex justify-center flex-wrap gap-4 mb-12 gallery-filters">
+                <button class="bg-primary text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-secondary active" data-filter="all">All Photos</button>
+                <button class="bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-white" data-filter="events">Events</button>
+                <button class="bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-white" data-filter="workshops">Workshops</button>
+                <button class="bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-white" data-filter="projects">Projects</button>
+                <button class="bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-white" data-filter="team">Team</button>
+            </div>
+
+            <!-- Photo Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12" id="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item events group cursor-pointer" data-category="events">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="C:\Users\avish\OneDrive\Desktop\ECC\photos\donation.jpeg" alt="Tech Symposium 2023" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">Donation Drive</h3>
+                                <p class="text-sm opacity-90">Annual technical symposium with 200+ participants</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item workshops group cursor-pointer" data-category="workshops">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="C:\Users\avish\OneDrive\Desktop\ECC\photos\guest lecture.jpeg" alt="Arduino Workshop" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">Guest Lecture</h3>
+                                <p class="text-sm opacity-90">Students learning microcontroller programming</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item projects group cursor-pointer" data-category="projects">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="C:\Users\avish\OneDrive\Desktop\ECC\photos\mesx.jpeg" alt="Robotics Project" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">MesX 3.0</h3>
+                                <p class="text-sm opacity-90">Student-built robots in action</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item team group cursor-pointer" data-category="team">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="C:\Users\avish\OneDrive\Desktop\ECC\photos\orientation.jpeg" alt="Team Photo" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">Orientation</h3>
+                                <p class="text-sm opacity-90">Our dedicated team members</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item workshops group cursor-pointer" data-category="workshops">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="C:\Users\avish\OneDrive\Desktop\ECC\photos\guest lecture.jpeg" alt="PCB Design Workshop" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">Senior Guidance</h3>
+                                <p class="text-sm opacity-90">Learning circuit board design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item events group cursor-pointer" data-category="events">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Industry Visit" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">Industry Visit</h3>
+                                <p class="text-sm opacity-90">Educational tour to electronics manufacturing facility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item projects group cursor-pointer" data-category="projects">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="/placeholder.svg?height=300&width=400" alt="IoT Project" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">IoT Smart Home</h3>
+                                <p class="text-sm opacity-90">Student project on home automation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item workshops group cursor-pointer" data-category="workshops">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Soldering Workshop" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">Soldering Workshop</h3>
+                                <p class="text-sm opacity-90">Hands-on electronics assembly training</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item events group cursor-pointer" data-category="events">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Guest Lecture" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">5G Technology Lecture</h3>
+                                <p class="text-sm opacity-90">Expert talk on communication systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item projects group cursor-pointer" data-category="projects">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Drone Project" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">Autonomous Drone</h3>
+                                <p class="text-sm opacity-90">Student-built quadcopter with navigation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item team group cursor-pointer" data-category="team">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Award Ceremony" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">Award Ceremony</h3>
+                                <p class="text-sm opacity-90">Recognizing outstanding student achievements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item workshops group cursor-pointer" data-category="workshops">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img src="/placeholder.svg?height=300&width=400" alt="MATLAB Workshop" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-lg font-semibold mb-1">MATLAB Workshop</h3>
+                                <p class="text-sm opacity-90">Signal processing and simulation techniques</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div> 
+            <!-- Load More Button -->
+            <div class="text-center mb-16">
+                <button class="bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300 hover:transform hover:-translate-y-1" id="loadMoreBtn">
+                    Load More Photos
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Photo Modal -->
+    <div class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4" id="photoModal">
+        <div class="relative max-w-4xl max-h-full bg-white rounded-2xl overflow-hidden animate-zoom-in">
+            <button class="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold z-10 transition-colors duration-300" id="modalClose">
+                ×
+            </button>
+            <img class="w-full max-h-96 object-cover" id="modalImage" src="/placeholder.svg" alt="">
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-primary mb-2" id="modalTitle"></h3>
+                <p class="text-gray-600" id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">ECC</h3>
+                    <p class="text-gray-300">Engineers Connect Club</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-secondary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">About Us</a></li>
+                        <li><a href="event.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">Events</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-secondary mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/@engineersconnectclub" class="text-gray-300 hover:text-secondary transition-colors duration-300">Youtube</a>
+                        <a href="https://www.instagram.com/engineersconnectclub/profilecard/?igsh=MWM4cGVjcjV4cnRkMA==" class="text-gray-300 hover:text-secondary transition-colors duration-300">Instagram</a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7325235320470286338" class="text-gray-300 hover:text-secondary transition-colors duration-300">LinkedIn</a>
+                        <a href="https://discord.gg/gfpTRcUb" class="text-gray-300 hover:text-secondary transition-colors duration-300">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Engineers Connect Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

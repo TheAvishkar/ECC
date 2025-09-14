@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ECC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans leading-relaxed text-gray-800 bg-white">
+    <!-- Header (same as index.html) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md transition-all duration-300 shadow-lg" id="header">
+        <nav class="flex justify-between items-center px-8 py-4">
+            <div class="text-primary text-3xl font-bold">
+                <h2>ECC</h2>
+            </div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="about.html" class="text-primary font-medium">About Us</a></li>
+                <li><a href="event.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Events</a></li>
+                <li><a href="team.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Team</a></li>
+                <li><a href="gallery.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Gallery</a></li>
+                <li><a href="contact.html" class="text-gray-800 font-medium hover:text-primary transition-colors duration-300">Contact</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col cursor-pointer" id="nav-toggle">
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Page Header -->
+            <div class="text-center py-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">About ECC</h1>
+                <p class="text-xl text-gray-600">Learn more about our vision, mission, and history</p>
+            </div>
+
+            <!-- Vision Section -->
+            <section class="py-12">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-primary mb-6">Our Vision</h2>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            To be the leading student organization that fosters innovation, creativity, and excellence 
+                            in electronics and communication engineering. We envision a community where students can 
+                            explore cutting-edge technologies, develop practical skills, and contribute to the 
+                            advancement of the field.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://thumbs.dreamstime.com/b/business-vision-compass-needle-pointing-word-blur-effect-plus-blue-black-tones-conceptual-image-immustration-42162095.jpg" alt="Our Vision" class="w-full rounded-2xl shadow-lg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission Section -->
+            <section class="py-12">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="md:order-2">
+                        <h2 class="text-3xl font-bold text-primary mb-6">Our Mission</h2>
+                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                            Our mission is to provide a platform for students to enhance their technical knowledge, 
+                            develop leadership skills, and engage in meaningful projects. We organize workshops, 
+                            seminars, competitions, and hands-on activities that bridge the gap between theoretical 
+                            learning and practical application.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-3">✓</span>
+                                <span class="text-gray-600">Promote technical excellence and innovation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-3">✓</span>
+                                <span class="text-gray-600">Foster collaboration and teamwork</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-3">✓</span>
+                                <span class="text-gray-600">Provide learning opportunities beyond the classroom</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-3">✓</span>
+                                <span class="text-gray-600">Connect students with industry professionals</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:order-1">
+                        <img src="https://img.freepik.com/premium-photo/businessman-clicks-virtual-screen-mission_1085052-765.jpg?semt=ais_hybrid&w=740&q=80" alt="Our Mission" class="w-full rounded-2xl shadow-lg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- History Timeline -->
+            <section class="py-16 bg-gray-50 -mx-6 px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-12">Our History</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative">
+                        <!-- Timeline line -->
+                        <div class="absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-primary hidden md:block"></div>
+                        
+                        <!-- Timeline items -->
+                        <div class="space-y-12">
+                            <div class="flex items-center md:justify-start">
+                                <div class="flex-shrink-0 w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                                    2021
+                                </div>
+                                <div class="ml-6 md:ml-0 md:w-1/2 md:pr-8">
+                                    <div class="bg-white p-6 rounded-2xl shadow-lg">
+                                        <h3 class="text-xl font-semibold text-primary mb-3">Foundation</h3>
+                                        <p class="text-gray-600">ECC was established by a group of passionate engineering students with the vision of creating a collaborative learning environment.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center md:justify-end">
+                                <div class="flex-shrink-0 w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                                    2021
+                                </div>
+                                <div class="ml-6 md:ml-0 md:w-1/2 md:pl-8">
+                                    <div class="bg-white p-6 rounded-2xl shadow-lg">
+                                        <h3 class="text-xl font-semibold text-primary mb-3">First Major Event</h3>
+                                        <p class="text-gray-600">Organized our first technical symposium, attracting over 200 participants from various departments .</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center md:justify-start">
+                                <div class="flex-shrink-0 w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                                    2024
+                                </div>
+                                <div class="ml-6 md:ml-0 md:w-1/2 md:pr-8">
+                                    <div class="bg-white p-6 rounded-2xl shadow-lg">
+                                        <h3 class="text-xl font-semibold text-primary mb-3">Digital Transformation</h3>
+                                        <p class="text-gray-600">Adapted to online learning and virtual events during the vacations, reaching a wider audience through digital platforms.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center md:justify-end">
+                                <div class="flex-shrink-0 w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                                    2025
+                                </div>
+                                <div class="ml-6 md:ml-0 md:w-1/2 md:pl-8">
+                                    <div class="bg-white p-6 rounded-2xl shadow-lg">
+                                        <h3 class="text-xl font-semibold text-primary mb-3">Present Day</h3>
+                                        <p class="text-gray-600">Today, ECC has grown to over 1000 active members and continues to be a driving force in engineering education.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <section class="py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-12">Our Values</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-5xl mb-4">💡</div>
+                        <h3 class="text-xl font-semibold text-primary mb-4">Innovation</h3>
+                        <p class="text-gray-600">We encourage creative thinking and innovative solutions to real-world problems.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-5xl mb-4">🎯</div>
+                        <h3 class="text-xl font-semibold text-primary mb-4">Excellence</h3>
+                        <p class="text-gray-600">We strive for excellence in everything we do, from projects to events.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-5xl mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold text-primary mb-4">Collaboration</h3>
+                        <p class="text-gray-600">We believe in the power of teamwork and collaborative learning.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-5xl mb-4">🌱</div>
+                        <h3 class="text-xl font-semibold text-primary mb-4">Growth</h3>
+                        <p class="text-gray-600">We are committed to continuous learning and personal development.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">ECC</h3>
+                    <p class="text-gray-300">Engineers Connect Club</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-secondary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">About Us</a></li>
+                        <li><a href="event.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">Events</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-secondary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-secondary mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/@engineersconnectclub" class="text-gray-300 hover:text-secondary transition-colors duration-300">Youtube</a>
+                        <a href="https://www.instagram.com/engineersconnectclub/profilecard/?igsh=MWM4cGVjcjV4cnRkMA==" class="text-gray-300 hover:text-secondary transition-colors duration-300">Instagram</a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7325235320470286338" class="text-gray-300 hover:text-secondary transition-colors duration-300">LinkedIn</a>
+                        <a href="https://discord.gg/gfpTRcUb" class="text-gray-300 hover:text-secondary transition-colors duration-300">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Engineers Connect Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
